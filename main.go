@@ -23,7 +23,11 @@ func main() {
 	output := widget.NewMultiLineEntry()
 
 	search_button := widget.NewButton("查找", func() { fmt.Println("button tapped!") })
-	clear_button := widget.NewButton("清空", func() { fmt.Println("button tapped!") })
+	clear_button := widget.NewButton("清空", func() {
+		fmt.Println("clear button tapped!")
+		input.SetText("")
+		output.SetText("")
+	})
 	refer_button := widget.NewButton("引用关系", func() { fmt.Println("button tapped!") })
 	setting_button := widget.NewButton("显示设置", func() { fmt.Println("button tapped!") })
 	// TODO: only one help_win should appeared
