@@ -1,0 +1,25 @@
+{
+  "name": "finder",
+  "description": "finder",
+  "author": {
+    "name": "zhengtianbao",
+    "email": "china.zhengtianbao@gmail.com"
+  },
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build  && electron-builder --config electron.config.json",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "electron": "^29.2.0",
+    "electron-builder": "^24.13.3",
+    "vite": "^5.2.0"
+  }
+}
