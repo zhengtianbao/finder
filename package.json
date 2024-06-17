@@ -6,12 +6,29 @@
     "email": "china.zhengtianbao@gmail.com"
   },
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
+  "build": {
+    "appId": "finder",
+    "productName": "finder",
+    "files": ["index.js", "./dist"],
+    "mac": {
+      "category": "public.app-category.lifestyle"
+    },
+    "dmg": {
+      "icon": false
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Office"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && electron-builder --config electron.config.json",
-    "preview": "vite preview"
+    "build": "vite build && electron-builder",
+    "preview": "vite preview",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "electron-builder --mac --windows --linux --publish always"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
