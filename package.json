@@ -12,14 +12,18 @@
     "appId": "finder",
     "productName": "finder",
     "files": ["index.js", "./dist"],
-    "mac": {
-      "category": "public.app-category.lifestyle"
+    "win": {
+      "target": ["nsis"],
+      "icon": "build/icon.png"
     },
-    "dmg": {
-      "icon": false
+    "mac": {
+      "target": ["dmg"],
+      "icon": "build/icon.png",
+      "category": "public.app-category.productivity"
     },
     "linux": {
       "target": ["AppImage"],
+      "icon": "build/icon.png",
       "category": "Office"
     }
   },
