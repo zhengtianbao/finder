@@ -5,7 +5,6 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 import { createApp } from 'vue'
 import router from '@/router/index'
-import run from '@/core/core.js'
 import App from './App.vue'
 import VueDiff from 'vue-diff';
 import 'vue-diff/dist/index.css';
