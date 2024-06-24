@@ -517,6 +517,20 @@ export default {
     height: 600px;
   }
 
+  :deep(.CodeMirror-lint-mark-error) {
+    background-color: yellow;
+    -webkit-animation: pulse 400ms infinite alternate;
+    animation: pulse 400ms infinite alternate;
+  }
+  @-webkit-keyframes pulse {
+    0% { background-color: red; }
+    100% { background-color: yellow; }
+  }
+  @keyframes pulse {
+    0% { background-color: red; }
+    100% { background-color: yellow; }
+  }
+
   :deep(.CodeMirror *) {
     font-size: 16px;
     line-height: 1.5em;
