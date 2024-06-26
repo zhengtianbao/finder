@@ -23,21 +23,6 @@ const routes = [{
       path: '/patent/check',
       name: 'Check',
       component: () => import('@/components/check.vue')
-    },
-    {
-      path: '/patent/annotative',
-      name: 'Annotative',
-      component: () => import('@/components/annotative.vue')
-    },
-    {
-      path: '/patent/laboratory',
-      name: 'Laboratory',
-      component: () => import('@/components/laboratory.vue')
-    },
-    {
-      path: '/patent/info',
-      name: 'Info',
-      component: () => import('@/components/info.vue')
     }
   ],
 },
