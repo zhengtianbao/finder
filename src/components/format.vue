@@ -161,14 +161,12 @@ function transform(type) {
 
   // 如果是说明书需要先做替换词检查 要求所有的替换词都必须在文本中出现
   if (type == 2) {
-    for (let i = 0; i < words.length; i++) {
-      let tmp = words[i].split("、");
-      if (!origin.value.includes(tmp[1])) {
-        ElMessageBox.alert('说明书中未出现附图标记：' + tmp[1] + " 请检查并修改", '提示', {
-          confirmButtonText: '好的',
-        })
-        return
-      }
+    let unused_words = words.filter(w => !origin.value.includes(w.split("、")[1]))
+    if (unused_words.length > 0) {
+      ElMessageBox.alert('说明书中未出现标记：' + unused_words.join("；") + " 请检查并修改", '提示', {
+        confirmButtonText: '好的',
+      })
+      return
     }
   }
 
