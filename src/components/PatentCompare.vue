@@ -98,9 +98,11 @@ export default {
 </script>
 
 <style>
-#compare {
-  text-align: center;
-  height: 100vh;
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
 }
 
 .switch-block {
