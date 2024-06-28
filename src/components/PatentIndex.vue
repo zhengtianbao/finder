@@ -1,18 +1,18 @@
 <template>
   <div id="home">
     <el-container>
-      <el-header><Navigation /></el-header>
+      <el-header><PatentNavigation /></el-header>
       <el-main><router-view /></el-main>
     </el-container>
   </div>
 </template>
 
 <script>
-import Navigation from './navigation.vue';
+import PatentNavigation from './PatentNavigation.vue';
 
 export default {
   components: {
-    Navigation,
+    PatentNavigation,
   },
 };
 </script>

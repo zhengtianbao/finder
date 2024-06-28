@@ -8,32 +8,24 @@ const routes = [
   {
     path: '/patent',
     name: 'Patent',
-    component: () => import('@/components/index.vue'),
+    component: () => import('@/components/PatentIndex.vue'),
     children: [
       {
         path: '/patent/format',
         name: 'Format',
-        component: () => import('@/components/format.vue'),
+        component: () => import('@/components/PatentFormat.vue'),
       },
       {
         path: '/patent/compare',
         name: 'Compare',
-        component: () => import('@/components/compare.vue'),
+        component: () => import('@/components/PatentCompare.vue'),
       },
       {
         path: '/patent/check',
         name: 'Check',
-        component: () => import('@/components/check.vue'),
+        component: () => import('@/components/PatentCheck.vue'),
       },
     ],
-  },
-
-  {
-    path: '/:catchAll(.*)',
-    meta: {
-      closeTab: true,
-    },
-    component: () => import('@/components/error.vue'),
   },
 ];
 

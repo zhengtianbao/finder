@@ -201,7 +201,7 @@ import {
 } from '@/utils/checkRules';
 
 export default {
-  name: 'Check',
+  name: 'PatentCheck',
   components: {
     IconCheckOne,
     IconAttention,
@@ -310,7 +310,7 @@ export default {
       );
       this.codemirrorContent = '';
       spans.forEach(span => {
-        if (!!span.querySelector('span[cm-text=""]')) {
+        if (span.querySelector('span[cm-text=""]')) {
           this.codemirrorContent += '\n';
         } else {
           let c = span.innerText;
@@ -331,11 +331,11 @@ export default {
       this.checkAllRules();
       this.initCodeMirror();
     },
-    handleRefWidthChange(newvalue, oldvalue) {
+    handleRefWidthChange(newvalue) {
       setRefSearchWordWidth(newvalue);
       this.remountCodeMirror();
     },
-    radioChange(value) {
+    radioChange() {
       this.remountCodeMirror();
     },
     initCodeMirror() {
@@ -436,7 +436,7 @@ export default {
           });
       };
     },
-    codemirrorOnChangeHandler(cm) {
+    codemirrorOnChangeHandler() {
       debounce(this.codemirrorOnChange(), 1000);
     },
     checkAllRules() {

@@ -23,23 +23,11 @@
 </template>
 
 <script>
-import {
-  SettingTwo as IconSettingTwo,
-  Logout as IconLogout,
-  Funds as IconFunds,
-  Financing as IconFinancing,
-} from '@icon-park/vue-next';
 import { getUrl } from '@/utils/image';
 import defaultUserImg from '@/assets/user.png';
 
 export default {
-  name: 'Navigation',
-  components: {
-    IconSettingTwo,
-    IconLogout,
-    IconFunds,
-    IconFinancing,
-  },
+  name: 'PatentNavigation',
   data() {
     return {
       defaultUserImg: defaultUserImg,

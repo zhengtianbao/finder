@@ -465,7 +465,7 @@ function replaceSubString(
 function escape(str) {
   if (!RegExp.escape) {
     RegExp.escape = function (s) {
-      return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      return s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
     };
   }
   return RegExp.escape(str);

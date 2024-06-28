@@ -74,7 +74,7 @@
 
 <script>
 export default {
-  name: 'Compare',
+  name: 'PatentCompare',
   computed: {
     folding() {
       if (this.isFolding == 'true') {
